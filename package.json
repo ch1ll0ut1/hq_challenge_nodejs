@@ -1,0 +1,37 @@
+{
+  "name": "hotel_quickly_nodejs_round1",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/jshint ./lib/",
+    "checkStyle": "./node_modules/.bin/jscs ./lib/ --reporter=console --preset=airbnb",
+    "...pretest": "npm run-script lint && npm run-script checkStyle",
+    "test": "./node_modules/.bin/mocha --recursive",
+    "...test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --recursive -R spec -r should",
+    "...posttest": "./node_modules/.bin/istanbul check-coverage && rm -rf coverage"
+  },
+  "author": "Stefan Knoch",
+  "license": "ISC",
+  "dependencies": {
+    "accounting": "^0.4.1",
+    "boom": "^2.7.1",
+    "braintree": "^1.24.0",
+    "handlebars": "^3.0.3",
+    "hapi": "^8.4.0",
+    "joi": "^6.4.1",
+    "mongoose": "^4.0.3",
+    "paypal-rest-sdk": "^1.5.3",
+    "poop": "^1.2.5",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "istanbul": "^0.3.2",
+    "jscs": "^1.6.1",
+    "jshint": "^2.5.5",
+    "mocha": "^1.21.4",
+    "should": "^4.0.4",
+    "supertest": "^1.0.1"
+  }
+}

@@ -1,0 +1,29 @@
+body {
+	padding-bottom: 30px;
+}
+
+fieldset {
+    margin-bottom: 30px;
+}
+
+input,
+textarea,
+select {
+	margin-bottom: 15px;
+}
+
+input.error,
+textarea.error,
+select.error {
+	border-color:red;
+}
+
+label.error {
+	color:red;
+}
+
+.cc_date {
+	width: 100px;
+	float: left;
+	margin-right: 10px;
+}
